@@ -1,9 +1,10 @@
+<?xml encoding="utf-8"?>
+
 <!--
 	このファイルの拡張子をwsfにし、クリックすると起動します。
 	(5の倍数-1)分の時に、「周囲の状況を確認しましたか?」と通知されます。
 -->
 
-<?xml encoding="utf-8"?>
 <package>
 	<job>
 		<script language="vbscript">
