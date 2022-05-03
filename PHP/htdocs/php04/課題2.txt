@@ -1,0 +1,9 @@
+$int1: 14
+$int2: 8
+$int3: 8
+$int4: 2
+$int5: 9
+$int6: 9
+$int7: 1
+$int8: 21
+$int9: 28
