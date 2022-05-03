@@ -1,0 +1,102 @@
+/* body */
+body {
+	margin: 0;
+	padding-top: 80px;
+}
+
+/* ヘッダー部分 */
+#header {
+	position: fixed;
+	top: 0;
+	margin-top: 0;
+	padding-top: 15px;
+	width: 100%;
+	background-color: #2c3e50;
+}
+
+#header a {
+	color: white;
+	text-decoration: none;
+}
+/* /ヘッダー部分 */
+
+/* コンテナの定義 */
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+/* /コンテナの定義 */
+
+/* ダミーコンテンツ 高さを定義 */
+.contents {
+	border: 1px solid gray;
+}
+
+.contents:NTH-CHILD(1) {
+	height: 200px;
+}
+
+.contents:NTH-CHILD(2) {
+	height: 300px;
+}
+
+.contents:NTH-CHILD(3) {
+	height: 400px;
+}
+/* /ダミーコンテンツ 高さを定義 */
+
+/* バーガーメニューのボタン*/
+.menu-trigger, .menu-trigger span {
+}
+
+/* start この部分に追記 */
+.menu-trigger {
+}
+
+.menu-trigger span {
+}
+
+.menu-trigger span:nth-of-type(1) {
+}
+
+.menu-trigger span:nth-of-type(2) {
+}
+
+.menu-trigger span:nth-of-type(3) {
+}
+/* end この部分に追記 */
+
+.menu-trigger.active span {
+}
+
+.menu-trigger.active span:nth-of-type(1) {
+}
+
+.menu-trigger.active span:nth-of-type(2) {
+}
+
+.menu-trigger.active span:nth-of-type(3) {
+}
+/* /バーガーメニューのボタン*/
+
+/* アコーディオンメニュー */
+/* start この部分に追記 */
+.accordion-menu ul {
+}
+
+.accordion-menu ul li {
+}
+
+.accordion-menu ul li a {
+}
+
+.accordion-menu ul li:last-child {
+}
+/* end この部分に追記 */
+
+.menu-trigger.active+.accordion-menu ul {
+}
+
+.menu-trigger.active+.accordion-menu ul li {
+}
+/* /アコーディオンメニュー */

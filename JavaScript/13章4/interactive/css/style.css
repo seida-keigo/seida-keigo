@@ -1,0 +1,10 @@
+#canvas {
+	border: 1px solid gray;
+}
+#brightness {
+	width: 300px;
+}
+
+#brightness_number {
+	width: 50px;
+}
