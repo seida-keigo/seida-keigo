@@ -15,8 +15,8 @@
 		<textarea placeholder="$に代入される文字列"></textarea>
 		<textarea placeholder="出力文字列を生成するJavaScript式"></textarea>
 		<script>
-			for(let i of[0,1]){
-				document.querySelectorAll("textarea")[i].oninput=()=>
+			for(let textarea of document.querySelectorAll("textarea")){
+				textarea.oninput=()=>
 				{
 					try{
 						let $=document.querySelectorAll("textarea")[0].value;
