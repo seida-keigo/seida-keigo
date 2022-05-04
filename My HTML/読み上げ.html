@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="style.css">
+		<style>
+			textarea{
+				height:calc(8em + 64px);
+			}
+		</style>
+		<title>読み上げ</title>
+	</head>
+	<body>
+		<textarea placeholder="テキスト"></textarea>
+		<button>読み上げ</button>
+		<script>
+			document.querySelectorAll("button")[0].onclick=()=>{
+				let speech=new SpeechSynthesisUtterance(document.querySelectorAll("textarea")[0].value);
+				speech.rate=2;
+				speechSynthesis.speak(speech);
+			}
+		</script>
+	</body>
+</html>
