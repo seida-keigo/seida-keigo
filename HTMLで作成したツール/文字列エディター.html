@@ -16,12 +16,11 @@
 		<textarea placeholder="出力文字列を生成するJavaScript式"></textarea>
 		<script>
 			for(let textarea of document.querySelectorAll("textarea")){
-				textarea.oninput=()=>
-				{
+				textarea.oninput=()=>{
 					try{
 						let $=document.querySelectorAll("textarea")[0].value;
 						(text=>{
-							document.querySelectorAll("p")[0].setAttribute("style",typeof $=="string"?"white-space:pre-wrap":"font-style:italic")
+							document.querySelectorAll("p")[0].setAttribute("style",typeof text=="string"?"white-space:pre-wrap":"font-style:italic")
 							document.querySelectorAll("p")[0].innerText=text
 						})(eval(document.querySelectorAll("textarea")[1].value));
 					}
