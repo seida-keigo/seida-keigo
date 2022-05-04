@@ -30,7 +30,6 @@ body{
 	background:#000;
 	color:#fff;
 	padding:8px;
-	width:calc(100% - 16px);
 }
 button,p,textarea{
 	margin:8px;
@@ -45,9 +44,6 @@ button{
 	cursor:pointer;
 	font-weight:bold;
 	text-align:center;
-}
-p{
-	width:calc(100% - 16px);
 }
 p::after,p::before{
 	content:"";
