@@ -4,7 +4,7 @@
 from selenium import webdriver
 edge=webdriver.Edge(executable_path="msedgedriver.exe")
 edge.get("https:www.ttmnet.co.jp/blog-allnightmusic")
-html="<!DOCTYPE html>\n<html>\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<style>\n\t\t\ta{text-decoration:unset}\n\t\t</style>\n\t</head>\n\t<body>"
+html="<meta charset=\"utf-8\">\n<style>\n\ta{text-decoration:unset}\n</style>"
 import re
 import time
 for url in[a.get_attribute("name")for a in reversed(edge.find_elements_by_css_selector(".nooptg>a"))]:
@@ -20,7 +20,7 @@ for url in[a.get_attribute("name")for a in reversed(edge.find_elements_by_css_se
 		tracks=[[re.sub("[ 　]*[/／][ 　]*「?|[ 　]*「|[ 　]+♪","+",track[0]),re.sub("[ 　]*[/／][ 　]*「?|[ 　]*「|[ 　]+♪"," - ",track[1])]for track in tracks]
 		tracks=[[re.sub("[ 　]+","+",track[0]),re.sub("[ 　]+"," ",track[1])]for track in tracks]
 		tracks=["<a href=\"http:youtube.com/results?search_query="+track[0]+"\" target=\"_blank\">"+track[1]+"</a>"for track in tracks]
-		tracks="<br>\n\t\t\t".join(tracks)
-		html+="\n\t\t<p>\n\t\t\t"+tracks+"\n\t\t</p>"
+		tracks="<br>\n\t".join(tracks)
+		html+="\n<p>\n\t"+tracks+"\n</p>"
 edge.quit()
-open("All Night Music.html","w",encoding="utf-8").write(html+"\n\t</body>\n</html>")
+open("All Night Music.html","w",encoding="utf-8").write(html)
