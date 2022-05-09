@@ -1,5 +1,5 @@
 @font-face{
-	font-family:a;
+	font-family:baseline;
 	src:local(verdana);
 	unicode-range:u+20;
 }
@@ -22,7 +22,7 @@
 	color:#ccc;
 }
 :root{
-	font-family:a,arial,yu gothic;
+	font-family:baseline,arial,yu gothic;
 	font-kerning:none;
 	overflow-wrap:break-word;
 }
