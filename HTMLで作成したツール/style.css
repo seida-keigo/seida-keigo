@@ -35,8 +35,9 @@ button,p,textarea{
 	margin:8px;
 }
 button,textarea{
+	display:block;
 	padding:12px 16px;
-	width:calc(100% - 48px);
+	/*width:calc(100% - 48px);*/
 }
 button{
 	background:#fff;
