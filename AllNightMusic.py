@@ -3,7 +3,7 @@
 
 from selenium import webdriver
 edge=webdriver.Edge("msedgedriver.exe")
-edge.get("https:www.ttmnet.co.jp/blog-allnightmusic")
+edge.get("https:www.ttmnet.co .jp/blog-allnightmusic")
 html="<meta charset=\"utf-8\">\n<style>\n\ta{text-decoration:unset}\n</style>"
 import re
 import time
