@@ -29,15 +29,15 @@
 body{
 	background:#000;
 	color:#fff;
-	padding:16px 8px 0;
+	padding:8px;
 }
 button,p,textarea{
-	margin:0 8px 16px;
+	display:inline-block;
+	margin:8px;
 }
 button,textarea{
-	display:block;
 	padding:12px 16px;
-	/*width:calc(100% - 48px);*/
+	width:calc(100% - 48px);
 }
 button{
 	background:#fff;
