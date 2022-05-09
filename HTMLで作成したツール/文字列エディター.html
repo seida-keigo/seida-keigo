@@ -19,10 +19,15 @@
 				textarea.oninput=()=>{
 					try{
 						let $=document.querySelectorAll("textarea")[0].value;
+						let text=eval(document.querySelectorAll("textarea")[1].value);
+						document.querySelectorAll("p")[0].setAttribute("style",typeof text=="string"?"white-space:pre-wrap":"font-style:italic")
+						document.querySelectorAll("p")[0].innerText=text
+						/*
 						(text=>{
 							document.querySelectorAll("p")[0].setAttribute("style",typeof text=="string"?"white-space:pre-wrap":"font-style:italic")
 							document.querySelectorAll("p")[0].innerText=text
 						})(eval(document.querySelectorAll("textarea")[1].value));
+						*/
 					}
 					catch(error){
 						document.querySelectorAll("p")[0].setAttribute("style","color:#f00");
