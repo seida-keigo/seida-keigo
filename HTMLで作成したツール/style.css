@@ -15,8 +15,8 @@
 *,::placeholder{
 	all:unset;
 	display:revert;
-	line-height:calc(1em + 8px);
 	font-weight:revert;
+	line-height:calc(1em + 8px);
 }
 ::placeholder{
 	color:#ccc;
