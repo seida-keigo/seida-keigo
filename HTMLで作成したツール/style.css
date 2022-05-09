@@ -57,5 +57,6 @@ p::before{
 }
 textarea{
 	background:#fff2;
+	height:calc(8em + 64px);
 	white-space:pre-wrap;
 }
