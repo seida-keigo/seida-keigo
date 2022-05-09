@@ -29,10 +29,10 @@
 body{
 	background:#000;
 	color:#fff;
-	margin:16px/*padding:8px*/;
+	margin:16px;
 }
 button,p,textarea{
-	margin:16px/*8px*/0;
+	margin:16px 0;
 }
 button,textarea{
 	display:block;
@@ -50,7 +50,7 @@ p{
 	width:calc(100% - 16px);
 }
 p::after,p::before{
-	content:"";
+	/*content:"";*/
 	display:block;
 }
 p::after{
