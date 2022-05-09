@@ -29,7 +29,7 @@
 body{
 	background:#000;
 	color:#fff;
-	padding:8px;
+	padding:16px 8px 0;
 }
 button,p,textarea{
 	margin:0 8px 16px;
