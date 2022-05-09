@@ -32,7 +32,8 @@ body{
 	margin:16px;
 }
 button,p,textarea{
-	margin:16px 0;
+	margin-bottom:16px;
+	margin-top:16px;
 }
 button,textarea{
 	display:block;
@@ -50,7 +51,7 @@ p{
 	width:calc(100% - 16px);
 }
 p::after,p::before{
-	/*content:"";*/
+	content:"";
 	display:block;
 }
 p::after{
