@@ -2,7 +2,7 @@
 # 作成されたHTMLファイルから、YouTubeで検索して視聴できます。
 
 from selenium import webdriver
-edge=webdriver.Edge(executable_path="msedgedriver.exe")
+edge=webdriver.Edge("msedgedriver.exe")
 edge.get("https:www.ttmnet.co.jp/blog-allnightmusic")
 html="<meta charset=\"utf-8\">\n<style>\n\ta{text-decoration:unset}\n</style>"
 import re
