@@ -64,3 +64,29 @@ textarea{
 	background:#fff3;
 	white-space:pre-wrap;
 }
+/*
+button,textarea{
+	display:block;
+	padding:12px 16px;
+	width:calc(100% - 32px);
+}
+p{
+	vertical-align:top;
+}
+p::first-line{
+	line-height:16px;
+}
+p::after,p::before{
+	content:"";
+	vertical-align:top;
+}
+p::after{
+	display:block;
+	margin-top:-4px;width:100%;
+}
+p::before{
+	display:inline-block;
+	height:1em;
+	margin-bottom:4px;
+}
+*/
