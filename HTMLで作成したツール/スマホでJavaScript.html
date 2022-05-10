@@ -11,16 +11,14 @@
 		<button>実行</button>
 		<script>
 			document.querySelectorAll("button")[0].onclick=()=>{
-				for(let p of document.querySelectorAll("p")){
-					p.remove();
-				}
+				for(let p of document.querySelectorAll("p")) p.remove();
 				try{
 					eval(document.querySelectorAll("textarea")[0].value);
 				}
 				catch(error){
-					let p=document.createElement("p");
-					p.innerText=error;
-					document.body.appendChild(p);
+					let newP=document.createElement("p");
+					newP.innerText=error;
+					document.body.appendChild(newP);
 				}
 			}
 		</script>
