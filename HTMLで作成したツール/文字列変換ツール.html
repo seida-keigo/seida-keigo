@@ -20,8 +20,8 @@
 					try{
 						let $=document.querySelectorAll("textarea")[0].value;
 						$=eval(document.querySelectorAll("textarea")[1].value);
-						document.querySelectorAll("textarea")[2].setAttribute("style",typeof $=="string"?"white-space:pre-wrap":"font-style:italic")
-						document.querySelectorAll("textarea")[2].value=$
+						document.querySelectorAll("textarea")[2].setAttribute("style",typeof $=="string"?"white-space:pre-wrap":"font-style:italic");
+						document.querySelectorAll("textarea")[2].value=$;
 					}
 					catch(error){
 						document.querySelectorAll("textarea")[2].setAttribute("style","color:#f00");
