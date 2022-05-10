@@ -19,9 +19,9 @@
 				document.querySelectorAll("textarea")[i].oninput=()=>{
 					try{
 						let $=document.querySelectorAll("textarea")[0].value;
-						$=eval(document.querySelectorAll("textarea")[1].value);
-						document.querySelectorAll("textarea")[2].setAttribute("style",typeof $=="string"?"white-space:pre-wrap":"font-style:italic");
-						document.querySelectorAll("textarea")[2].value=$;
+						text=$=eval(document.querySelectorAll("textarea")[1].value);
+						document.querySelectorAll("textarea")[2].setAttribute("style",typeof text=="string"?"white-space:pre-wrap":"font-style:italic");
+						document.querySelectorAll("textarea")[2].value=text;
 					}
 					catch(error){
 						document.querySelectorAll("textarea")[2].setAttribute("style","color:#f00");
