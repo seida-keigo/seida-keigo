@@ -18,7 +18,8 @@
 			for(let i of[0,1]) document.querySelectorAll("textarea")[i].oninput=()=>{
 				try{
 					let $=document.querySelectorAll("textarea")[0].value;
-					let text=$=eval(document.querySelectorAll("textarea")[1].value);
+					$=eval(document.querySelectorAll("textarea")[1].value);
+					let text=$;
 					document.querySelectorAll("textarea")[2].setAttribute("style",typeof text=="string"?"white-space:pre-wrap;":"font-style:italic;");
 					document.querySelectorAll("textarea")[2].value=text;
 				}
