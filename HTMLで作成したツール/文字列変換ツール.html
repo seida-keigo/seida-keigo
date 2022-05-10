@@ -5,6 +5,10 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<link rel="stylesheet" href="style.css">
 		<style>
+			TEXTAREA[PLACEHOLDER=\$に代入される文字列],TEXTAREA[READONLY]{
+				HEIGHT:CALC(6EM + 48PX)};
+			p{outline:solid;
+			}
 			textarea[placeholder="出力文字列を生成するJavaScript式"]{
 				height:calc(4em + 32px);
 			}
@@ -15,27 +19,22 @@
 		<textarea placeholder="$に代入される文字列"></textarea>
 		<textarea placeholder="出力文字列を生成するJavaScript式"></textarea>
 		<script>
-			for(let textarea of document.querySelectorAll("textarea")){
-				textarea.oninput=()=>{
+			for(let i of[0,1]){
+				document.querySelectorAll("textarea")[i].oninput=()=>{
 					try{
 						let $=document.querySelectorAll("textarea")[0].value;
 						$=eval(document.querySelectorAll("textarea")[1].value);
-						document.querySelectorAll("p")[0].setAttribute("style",typeof $=="string"?"white-space:pre-wrap":"font-style:italic")
-						document.querySelectorAll("p")[0].innerText=$
-						/*
-						(text=>{
-							document.querySelectorAll("p")[0].setAttribute("style",typeof text=="string"?"white-space:pre-wrap":"font-style:italic")
-							document.querySelectorAll("p")[0].innerText=text
-						})(eval(document.querySelectorAll("textarea")[1].value));
-						*/
+						document.querySelectorAll("textarea")[2].setAttribute("style",typeof $=="string"?"white-space:pre-wrap":"font-style:italic")
+						document.querySelectorAll("textarea")[2].value=$
 					}
 					catch(error){
-						document.querySelectorAll("p")[0].setAttribute("style","color:#f00");
-						document.querySelectorAll("p")[0].innerText=error;
+						document.querySelectorAll("textarea")[2].setAttribute("style","color:#f00");
+						document.querySelectorAll("textarea")[2].value=error;
 					}
 				}
 			}
 		</script>
-		<p style="font-style:italic">undefined</p>
+		<p>以下のテキストボックスをクリックし、Ctrl+AかCommand+Aを押すと、変換後の文字列を選択できます。</p>
+		<textarea readonly style="font-style:italic">undefined</TEXTAREA>
 	</body>
 </html>
