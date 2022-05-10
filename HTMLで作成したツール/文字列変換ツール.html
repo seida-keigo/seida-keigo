@@ -15,18 +15,16 @@
 		<textarea placeholder="$に代入される文字列"></textarea>
 		<textarea placeholder="出力文字列を生成するJavaScript式"></textarea>
 		<script>
-			for(let i of[0,1]){
-				document.querySelectorAll("textarea")[i].oninput=()=>{
-					try{
-						let $=document.querySelectorAll("textarea")[0].value;
-						let text=$=eval(document.querySelectorAll("textarea")[1].value);
-						document.querySelectorAll("textarea")[2].setAttribute("style",typeof text=="string"?"white-space:pre-wrap":"font-style:italic");
-						document.querySelectorAll("textarea")[2].value=text;
-					}
-					catch(error){
-						document.querySelectorAll("textarea")[2].setAttribute("style","color:#f00");
-						document.querySelectorAll("textarea")[2].value=error;
-					}
+			for(let i of[0,1]) document.querySelectorAll("textarea")[i].oninput=()=>{
+				try{
+					let $=document.querySelectorAll("textarea")[0].value;
+					let text=$=eval(document.querySelectorAll("textarea")[1].value);
+					document.querySelectorAll("textarea")[2].setAttribute("style",typeof text=="string"?"white-space:pre-wrap":"font-style:italic");
+					document.querySelectorAll("textarea")[2].value=text;
+				}
+				catch(error){
+					document.querySelectorAll("textarea")[2].setAttribute("style","color:#f00");
+					document.querySelectorAll("textarea")[2].value=error;
 				}
 			}
 		</script>
