@@ -12,17 +12,17 @@
 		<title>文字列変換ツール</title>
 	</head>
 	<body>
-		<textarea placeholder="$に代入される文字列"></textarea>
-		<textarea placeholder="出力文字列を生成するJavaScript式"></textarea>
+		<textarea placeholder="変換前の文字列($に代入)"></textarea>
+		<textarea placeholder="$を変換するJavaScript式"></textarea>
 		<textarea id="newText" readonly style="font-style:italic;">undefined</textarea>
-		<button>コピー</button>
+		<button>変換後のテキストをコピー</button>
 		<script>
 			for(let i of[0,1]) document.querySelectorAll("textarea")[i].oninput=()=>{
 				try{
 					let $=document.querySelectorAll("textarea")[0].value;
 					$=eval(document.querySelectorAll("textarea")[1].value);
-					newText.setAttribute("style",typeof $=="string"?"white-space:pre-wrap;":"font-style:italic;");
-					newText.value=$
+					newText.setAttribute("style",typeof $=="string"?"white-space:pre-wrap;":"color:#00f;");
+					newText.value=typeof $=="string"?$:$+" ("+typeof $+")";
 					document.querySelectorAll("button")[0][$!==""?"removeAttribute":"setAttribute"]("disabled","");
 				}
 				catch(error){
