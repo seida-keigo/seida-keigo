@@ -56,10 +56,10 @@ p::after,p::before{
 	display:block;
 }
 p::after{
-	margin-bottom:-4px;
+	margin-top:-4px;
 }
 p::before{
-	margin-top:-4px;
+	margin-bottom:-4px;
 }
 textarea{
 	background:#fff3;
