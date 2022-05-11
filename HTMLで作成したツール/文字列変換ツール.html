@@ -32,7 +32,10 @@
 		<textarea readonly style="font-style:italic;">undefined</textarea>
 		<button>コピー</button>
 		<script>
-			document.querySelectorAll("button")[0].onclick=()=>{}
+			document.querySelectorAll("button")[0].onclick=()=>{
+				document.querySelectorAll("textarea")[2].select();
+				document.execCommand("copy");
+			}
 		</script>
 	</body>
 </html>
