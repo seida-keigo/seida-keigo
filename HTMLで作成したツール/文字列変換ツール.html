@@ -15,7 +15,7 @@
 		<textarea placeholder="変換前の文字列 ($に代入)"></textarea>
 		<textarea placeholder="$を変換するJavaScript式"></textarea>
 		<textarea disabled id="newText" readonly style="font-style:italic;">undefined</textarea>
-		<button>変換後の文字列をコピー</button>
+		<button id="copyButton">変換後の文字列をコピー</button>
 		<script>
 			for(let i of[0,1]) document.querySelectorAll("textarea")[i].oninput=()=>{
 				try{
@@ -23,19 +23,21 @@
 					$=eval(document.querySelectorAll("textarea")[1].value);
 					newText.setAttribute("style",typeof $=="string"?"white-space:pre-wrap;":"font-style:italic;");
 					newText.value=typeof $=="string"?$:$+" ("+typeof $+")";
-					document.querySelectorAll("button")[0][$!==""&&typeof $=="string"?"removeAttribute":"setAttribute"]("disabled","");
+					copyButton[$!==""&&typeof $=="string"?"removeAttribute":"setAttribute"]("disabled","");
 				}
 				catch(error){
 					newText.setAttribute("style","color:#f00;");
 					newText.value=error;
-					document.querySelectorAll("button")[0].setAttribute("disabled","");
+					copyButton.setAttribute("disabled","");
 				}
 			}
-			document.querySelectorAll("button:disabled")[0].onclick=()=>alert("コピーできません。");
-			document.querySelectorAll("button:not(:disabled)")[0].onclick=()=>{
-				newText.select();
-				document.execCommand("copy");
-				alert("コピーしました。");
+			copyButton.onclick=()=>{
+				if(copyButton.hasAttribute("disabled")) alert("コピーできません。");
+				else{
+					newText.select();
+					document.execCommand("copy");
+					alert("コピーしました。");
+				}
 			}
 		</script>
 	</body>
