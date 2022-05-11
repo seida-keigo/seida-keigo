@@ -21,7 +21,7 @@
 				try{
 					let $=document.querySelectorAll("textarea")[0].value;
 					$=eval(document.querySelectorAll("textarea")[1].value);
-					newText.setAttribute("style",typeof $=="string"?"white-space:pre-wrap;":"color:#00f;");
+					newText.setAttribute("style",typeof $=="string"?"white-space:pre-wrap;":"font-style:italic;");
 					newText.value=typeof $=="string"?$:$+" ("+typeof $+")";
 					document.querySelectorAll("button")[0][$!==""?"removeAttribute":"setAttribute"]("disabled","");
 				}
