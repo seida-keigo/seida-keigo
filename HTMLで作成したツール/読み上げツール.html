@@ -5,18 +5,18 @@
 		<meta charset="utf-8">
 		<meta content="width=device-width,initial-scale=1" name="viewport">
 		<style>
-			textarea[placeholder="テキスト"]{
+			#text{
 				height:calc(16em + 128px);
 			}
 		</style>
 		<title>読み上げツール</title>
 	</head>
 	<body>
-		<textarea placeholder="テキスト"></textarea>
+		<textarea id="text" placeholder="テキスト"></textarea>
 		<button>読み上げ</button>
 		<script>
-			document.querySelectorAll("button")[0].onclick=()=>{
-				let speech=new SpeechSynthesisUtterance(document.querySelectorAll("textarea")[0].value);
+			text.onclick=()=>{
+				let speech=new SpeechSynthesisUtterance(text.value);
 				speech.rate=2;
 				speechSynthesis.speak(speech);
 			}
