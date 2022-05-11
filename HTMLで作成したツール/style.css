@@ -46,7 +46,7 @@ button{
 	text-align:center;
 }
 button:disabled{
-	background:#fffc;
+	background:#fff6;
 }
 button:not(:disabled){
 	background:#fff;
