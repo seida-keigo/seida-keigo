@@ -21,9 +21,7 @@
 					$=eval(document.querySelectorAll("textarea")[1].value);
 					document.querySelectorAll("textarea")[2].setAttribute("style",typeof $=="string"?"white-space:pre-wrap;":"font-style:italic;");
 					document.querySelectorAll("textarea")[2].value=$
-					$!==""?
-						document.querySelectorAll("button")[0].removeAttribute("disabled"):
-						document.querySelectorAll("button")[0].setAttribute("disabled","");
+					document.querySelectorAll("button")[0].[$!==""?"removeAttribute":"setAttribute"]("disabled","");
 				}
 				catch(error){
 					document.querySelectorAll("textarea")[2].setAttribute("style","color:#f00;");
