@@ -14,8 +14,8 @@
 	<body>
 		<textarea placeholder="変換前の文字列 ($に代入)"></textarea>
 		<textarea placeholder="$を変換するJavaScript式"></textarea>
-		<textarea disabled id="newText" readonly style="font-style:italic;">undefined</textarea>
-		<button id="copyButton">変換後の文字列をコピー</button>
+		<textarea id="newText" readonly style="font-style:italic;">undefined</textarea>
+		<button disabled id="copyButton">変換後の文字列をコピー</button>
 		<script>
 			for(let i of[0,1]) document.querySelectorAll("textarea")[i].oninput=()=>{
 				try{
