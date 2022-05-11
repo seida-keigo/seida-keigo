@@ -20,8 +20,10 @@
 					let $=document.querySelectorAll("textarea")[0].value;
 					$=eval(document.querySelectorAll("textarea")[1].value);
 					document.querySelectorAll("textarea")[2].setAttribute("style",typeof $=="string"?"white-space:pre-wrap;":"font-style:italic;");
-					document.querySelectorAll("textarea")[2].value=$;
-					document.querySelectorAll("button")[0].removeAttribute("disabled");
+					document.querySelectorAll("textarea")[2].value=$
+					$!==""?
+						document.querySelectorAll("button")[0].removeAttribute("disabled"):
+						document.querySelectorAll("button")[0].setAttribute("disabled","");
 				}
 				catch(error){
 					document.querySelectorAll("textarea")[2].setAttribute("style","color:#f00;");
@@ -33,7 +35,7 @@
 		<textarea readonly style="font-style:italic;">undefined</textarea>
 		<button>コピー</button>
 		<script>
-			document.querySelectorAll("button")[0].onclick=()=>{
+			document.querySelectorAll("button:not(:disabled)")[0].onclick=()=>{
 				document.querySelectorAll("textarea")[2].select();
 				document.execCommand("copy");
 			}
