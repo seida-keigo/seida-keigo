@@ -41,11 +41,16 @@ button,textarea{
 	width:calc(100% - 32px);
 }
 button{
-	background:#fff;
 	color:initial;
-	cursor:pointer;
 	font-weight:bold;
 	text-align:center;
+}
+button:disabled{
+	background:#fffc;
+}
+button:not(:disabled){
+	background:#fff;
+	cursor:pointer;
 }
 p::after,p::before{
 	content:"";
