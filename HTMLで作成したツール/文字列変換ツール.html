@@ -5,7 +5,7 @@
 		<meta charset="utf-8">
 		<meta content="width=device-width,initial-scale=1.0" name="viewport">
 		<style>
-			textarea[placeholder="$に代入される文字列"],textarea[readonly]{
+			textarea[placeholder="$に代入される文字列"],#newText{
 				height:calc(6em + 48px);
 			}
 		</style>
@@ -14,27 +14,25 @@
 	<body>
 		<textarea placeholder="$に代入される文字列"></textarea>
 		<textarea placeholder="出力文字列を生成するJavaScript式"></textarea>
+		<textarea id="newText" readonly style="font-style:italic;">undefined</textarea>
+		<button>コピー</button>
 		<script>
 			for(let i of[0,1]) document.querySelectorAll("textarea")[i].oninput=()=>{
 				try{
 					let $=document.querySelectorAll("textarea")[0].value;
 					$=eval(document.querySelectorAll("textarea")[1].value);
-					document.querySelectorAll("textarea")[2].setAttribute("style",typeof $=="string"?"white-space:pre-wrap;":"font-style:italic;");
-					document.querySelectorAll("textarea")[2].value=$
+					newText.setAttribute("style",typeof $=="string"?"white-space:pre-wrap;":"font-style:italic;");
+					newText.value=$
 					document.querySelectorAll("button")[0][$!==""?"removeAttribute":"setAttribute"]("disabled","");
 				}
 				catch(error){
-					document.querySelectorAll("textarea")[2].setAttribute("style","color:#f00;");
-					document.querySelectorAll("textarea")[2].value=error;
+					newText.setAttribute("style","color:#f00;");
+					newText.value=error;
 					document.querySelectorAll("button")[0].setAttribute("disabled","");
 				}
 			}
-		</script>
-		<textarea readonly style="font-style:italic;">undefined</textarea>
-		<button>コピー</button>
-		<script>
 			document.querySelectorAll("button:not(:disabled)")[0].onclick=()=>{
-				document.querySelectorAll("textarea")[2].select();
+				newText.select();
 				document.execCommand("copy");
 				alert("コピーしました。")
 			}
