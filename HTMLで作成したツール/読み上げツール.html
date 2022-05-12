@@ -17,7 +17,7 @@
 		<script>
 			document.querySelectorAll("button")[0].onclick=()=>{
 				let speech=new SpeechSynthesisUtterance(document.querySelectorAll("textarea")[0].value);
-				navigator.userAgent.includes("Windows NT")&&speech.rate=2;
+				if(navigator.userAgent.includes("Windows NT")) speech.rate=2;
 				speechSynthesis.speak(speech);
 			}
 		</script>
