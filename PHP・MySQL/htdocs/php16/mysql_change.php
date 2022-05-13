@@ -1,0 +1,21 @@
+<pre><?php
+  $host='mysql34.conoha.ne.jp';
+  $username='bcdhm_work02';
+  $passwd='t7ZWmB5c!';
+  $dbname='bcdhm_work02';
+  $link=mysqli_connect($host,$username,$passwd,$dbname);
+  if($link){
+    mysqli_set_charset($link,'utf8');
+    $query='INSERT INTO goods_table(goods_name,price)VALUES(\'ボールペン\',80)';
+    if(mysqli_query($link,$query)===TRUE){
+      print'成功';
+    }
+    else{
+      print'失敗';
+    }
+    mysqli_close($link);
+  }
+  else{
+    print'DB接続失敗';
+  }
+?></pre>
