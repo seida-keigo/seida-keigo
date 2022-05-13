@@ -1,6 +1,3 @@
-# テレビ東京のAll Night Musicで放送された曲の一覧のHTMLファイルを作成します。
-# 作成されたHTMLファイルから、YouTubeで検索して視聴できます。
-
 from selenium import webdriver
 edge=webdriver.Edge("msedgedriver.exe")
 edge.get("https:www.ttmnet.co.jp/blog-allnightmusic")

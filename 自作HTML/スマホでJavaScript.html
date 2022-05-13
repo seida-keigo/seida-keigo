@@ -15,6 +15,11 @@
 		<textarea placeholder="JavaScript"></textarea>
 		<button>実行</button>
 		<script>
+			console.log=x=>{
+				let newP=document.createElement("p");
+				newP.innerText=JSON.stringify(x);
+				document.body.appendChild(newP);
+			}
 			document.querySelectorAll("button")[0].onclick=()=>{
 				for(let p of document.querySelectorAll("p")) p.remove();
 				try{
@@ -23,6 +28,7 @@
 				catch(error){
 					let newP=document.createElement("p");
 					newP.innerText=error;
+					newP.setAttribute("style","color:#f00;")
 					document.body.appendChild(newP);
 				}
 			}

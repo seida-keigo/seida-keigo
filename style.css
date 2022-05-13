@@ -138,14 +138,33 @@ h4{
 	color:#fff;
 	font-size:14px;
 	letter-spacing:6px;
+	text-align:center;
+}
+div.gallery h4{
 	margin-top:0;
 	margin-bottom:4px;
-	text-align:center;
 }
 div.gallery p{
 	font-size:12px;
 	line-height:20px;
 }
+div.work{
+	margin:4px auto;
+	width:600px;
+	max-width:90%;
+}
+div.work h4{
+	margin-bottom:0;
+}
+div.work img{
+	margin-bottom:16px;
+	width:100%;
+}
+div.work p{
+	margin-bottom:32px;
+	letter-spacing:2px;
+}
+/*
 label{
 	display:block;
 	margin-left:auto;
@@ -188,6 +207,7 @@ input[type="submit"],button{
 	text-align:center;
 	width:300px;
 }
+*/
 footer{
 	background:#8ab3dc;
 	color:#fff;
