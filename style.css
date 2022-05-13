@@ -1,0 +1,250 @@
+body{
+    margin:80px 0 0;
+}
+header{
+    background:rgba(0,0,0,.8);
+    color:#fff;
+    height:40px;
+    line-height:40px;
+    margin-top:-80px;
+    padding:20px;
+    position:fixed;
+    width:calc(100% - 40px);
+}
+header *{
+    display:inline-block;
+}
+h1{
+    font-size:24px;
+    margin-top:0;
+    margin-bottom:0;
+}
+h1::first-letter{
+    color:#a6acff;
+}
+header>div{
+    display:flex;
+    float:right;
+    column-gap:40px;
+}
+header a{
+    color:#fff;
+    text-decoration:none;
+}
+div.clear{
+    clear:right;
+}
+div.top{
+    background-image:url(images/top.jpg);
+    background-position:center;
+    background-size:cover;
+    height:calc(40vh - 80px);
+    width:100%;
+}
+h2{
+    color:#4b52a7;
+    font-size:24px;
+    margin-top:80px;
+    margin-bottom:40px;
+    text-align:center;
+}
+h2>small{
+    font-size:14px;
+    letter-spacing:4px;
+}
+p:not(.selfintroduce){
+    margin-top:0;
+    margin-bottom:0;
+}
+p.selfintroduce{
+    font-size:16px;
+    letter-spacing:2px;
+    line-height:32px;
+    margin-left:auto;
+    margin-right:auto;
+    width:600px;
+    max-width:90%;
+}
+img{
+    display:block;
+}
+img.img01{
+    margin-left:auto;
+    margin-right:auto;
+    max-width:90%;
+}
+h3{
+    font-size:16px;
+    letter-spacing:4px;
+    text-align:center;
+}
+h3>small{
+    font-size:12px;
+}
+div.fav{
+    display:flex;
+    justify-content:space-between;
+    margin:40px auto 80px;
+    width:1024px;
+    max-width:90%;
+}
+div.fav>div{
+    background:#8ab3dc;
+    border-radius:10px;
+    color:#fff;
+    width:48%;
+}
+div.fav>div>h3{
+    border-bottom:solid 1px #fff;
+    margin:20px;
+    padding-bottom:10px;
+}
+ul{
+    color:#feffc7;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+ul.links{
+    color:#ffe8f6;
+}
+li{
+    min-height:30px;
+}
+li a{
+    color:inherit;
+}
+h3.sampleheader{
+    border-bottom:solid 1px #b7b7b7;
+    color:#32839c;
+    margin:80px auto 40px;
+    padding-bottom:6px;
+    width:1024px;
+    max-width:90%;
+}
+div.gallery{
+    display:flex;
+    margin-left:auto;
+    margin-right:auto;
+    width:1024px;
+    max-width:90%;
+}
+div.gallery>div>*{
+    margin-left:auto;
+    margin-right:auto;
+    width:90%;
+}
+h4{
+    background:#758baf;
+    color:#fff;
+    font-size:14px;
+    letter-spacing:6px;
+    margin-top:0;
+    margin-bottom:4px;
+    text-align:center;
+}
+div.gallery p{
+    font-size:12px;
+    line-height:20px;
+}
+label{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:600px;
+    max-width:calc(90% - 6px);
+}
+label>span{
+    background:#32839c;
+    border-radius:4px;
+    color:#fff;
+    font-size:12px;
+    padding:4px 8px;
+}
+input[type="name"],input[type="email"],input[type="number"],textarea{
+    border-radius:10px;
+    display:block;
+    margin:10px auto 16px;
+    padding-top:4px;
+    padding-bottom:4px;
+    width:594px;
+    max-width:calc(90% - 6px);
+}
+input[type="name"],input[type="email"],input[type="number"]{
+    border-width:1px;
+}
+textarea{
+    resize:none;
+}
+input[type="submit"],button{
+    background:#8ab3dc;
+    border:none;
+    border-radius:4px;
+    box-shadow:0 4px #818694;
+    color:#fff;
+    display:block;
+    line-height:40px;
+    margin:40px auto 80px;
+    padding:0;
+    text-align:center;
+    width:300px;
+}
+footer{
+    background:#8ab3dc;
+    color:#fff;
+    height:100px;
+    padding-top:20px;
+    text-align:center;
+}
+@media(max-width:768px){
+    body{
+        margin:48px 0 0;
+    }
+    header{
+        height:28px;
+        line-height:28px;
+        margin-top:-48px;
+        padding:10px;
+        width:calc(100% - 20px);
+    }
+    h1,h2{
+        font-size:20px;
+    }
+    header>div{
+        display:none;
+    }
+    div.top{
+        background-image:url(images/top_tab.jpg);
+        height:calc(100vh - 48px);
+    }
+    p.selfintroduce{
+        font-size:14px;
+        line-height:24px;
+    }
+    div.fav{
+        margin-top:20px;
+    }
+    div.gallery{
+        flex-wrap:wrap;
+    }
+    div.gallery>div{
+        width:50%;
+    }
+}
+@media(max-width:499px){
+    div.fav{
+        flex-wrap:wrap;
+        row-gap:10px;
+    }
+    div.fav>div{
+        width:100%;
+    }
+    div.gallery{
+        row-gap:30px;
+    }
+    div.gallery>div{
+        width:100%;
+    }
+    div.gallery>div>*{
+        width:80%;
+    }
+}
