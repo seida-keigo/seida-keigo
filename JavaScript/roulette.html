@@ -34,16 +34,14 @@
 			</tbody>
 		</table>
 		<button id="start">スタート</button>
-		<button id="stop">ストップ</button>
-		<button id="reset">リセット</button>
+		<button disabled id="stop">ストップ</button>
+		<button disabled id="reset">リセット</button>
 		<script>
-			//var start=document.querySelector("#start");
+			var start=document.querySelector("#start");
 			var stop=document.querySelector("#stop");
-			//var reset=document.querySelector("#reset");
+			var reset=document.querySelector("#reset");
 			
-			var unselectedCells=[...display.querySelectorAll("td")];
-			stop.setAttribute("disabled","");
-			reset.setAttribute("disabled","");
+			var unselectedCells=[...document.querySelectorAll("#display td")];
 			var lightingCell/*光っているセル*/;
 
 			start.addEventListener("click",()=>{
