@@ -1,9 +1,0 @@
-$q_1: string
-$q_2: string
-$q_3: int
-$q_4: string
-$q_5: bool
-$q_6: string
-$q_7: string
-$q_8: float
-$q_9: null
