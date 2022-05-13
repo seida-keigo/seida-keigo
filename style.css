@@ -2,7 +2,7 @@ body{
 	margin:80px 0 0;
 }
 header{
-	background:rgba(0,0,0,.8);
+	background:#000c;
 	color:#fff;
 	height:40px;
 	line-height:40px;
@@ -85,8 +85,8 @@ div.skill{
 	display:flex;
 	justify-content:space-between;
 	margin:40px auto 80px;
-	width:1024px;
 	max-width:90%;
+	width:1024px;
 }
 div.skill>div{
 	background:#8ab3dc;
