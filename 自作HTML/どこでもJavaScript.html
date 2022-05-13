@@ -15,13 +15,27 @@
 		<textarea placeholder="JavaScript"></textarea>
 		<button>実行</button>
 		<script>
+			clear=console.clear=()=>{
+				for(let p of document.querySelectorAll("p")) p.remove();
+			}
+			console.error=x=>{
+				let newP=document.createElement("p");
+				newP.innerText=JSON.stringify(x);
+				newP.setAttribute("style","color:#f00;")
+				document.body.appendChild(newP);
+			}
 			console.log=x=>{
 				let newP=document.createElement("p");
 				newP.innerText=JSON.stringify(x);
 				document.body.appendChild(newP);
 			}
+			console.warn=x=>{
+				let newP=document.createElement("p");
+				newP.innerText=JSON.stringify(x);
+				newP.setAttribute("style","color:#ff0;")
+				document.body.appendChild(newP);
+			}
 			document.querySelectorAll("button")[0].onclick=()=>{
-				for(let p of document.querySelectorAll("p")) p.remove();
 				try{
 					eval(document.querySelectorAll("textarea")[0].value);
 				}

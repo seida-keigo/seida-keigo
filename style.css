@@ -1,3 +1,6 @@
+html{
+	scroll-behavior:smooth;
+}
 body{
 	margin:80px 0 0;
 }
@@ -212,6 +215,7 @@ footer{
 	background:#8ab3dc;
 	color:#fff;
 	height:100px;
+	margin-top:120px;
 	padding-top:20px;
 	text-align:center;
 }
