@@ -34,7 +34,9 @@
 			copyButton.onclick=()=>{
 				newText.select();
 				document.execCommand("copy");
-				alert("コピーしました。");
+				copyButton.innerText="コピーしました。";
+				clearTimeout(window.timeout);
+				timeout=setTimeout(()=>copyButton.innerText="変換後の文字列をコピー",1000);
 			}
 		</script>
 	</body>

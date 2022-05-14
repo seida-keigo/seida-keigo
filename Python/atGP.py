@@ -20,4 +20,10 @@ if type in["1","2","3"]:
 			break
 		i+=1
 	edge.quit()
-	open("atGP URL 事務等.txt"if type=="1"else"atGP URL IT.txt"if type=="2"else"atGP URL 製造等.txt","w").write("\n".join(sorted(list)))
+	open(
+		"atGP URL 事務等.txt"
+			if type=="1"else
+		"atGP URL IT.txt"
+			if type=="2"else
+		"atGP URL 製造等.txt"
+	,"w").write("\n".join(sorted(list)))
