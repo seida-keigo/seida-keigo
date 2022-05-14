@@ -30,13 +30,13 @@
 					newText.value=error;
 					copyButton.setAttribute("disabled","");
 				}
+				copyButton.innerText="変換後の文字列をコピー";
 			}
 			copyButton.onclick=()=>{
 				newText.select();
 				document.execCommand("copy");
-				copyButton.innerText="コピーしました。";
-				clearTimeout(window.timeout);
-				timeout=setTimeout(()=>copyButton.innerText="変換後の文字列をコピー",1000);
+				copyButton.setAttribute("disabled","");
+				copyButton.innerText="コピー済み";
 			}
 		</script>
 	</body>
