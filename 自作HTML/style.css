@@ -16,6 +16,7 @@
 	all:unset;
 	display:revert;
 	line-height:calc(1em + 8px);
+	transition:.25s background;
 }
 ::placeholder{
 	color:#ccc;
@@ -50,6 +51,9 @@ button:disabled{
 button:not(:disabled){
 	background:#fff;
 	cursor:pointer;
+}
+button:hover:not(:active,:disabled){
+	background:#ccc;
 }
 p::after,p::before{
 	content:"";
