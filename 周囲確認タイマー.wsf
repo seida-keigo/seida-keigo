@@ -2,7 +2,7 @@
 <package>
 	<job>
 		<script language="vbscript">
-			If MsgBox("(5の倍数-1)分の時刻に、「周囲の状況変化を"&amp;VbLf&amp;"確認しましょう」と通知されます。",36,"周囲確認タイマーを起動しますか?")=6 Then
+			If MsgBox("(5の倍数-1)分の時刻に、「周囲の状況変化を"&amp;vbLf&amp;"確認しましょう」と通知されます。",36,"周囲確認タイマーを起動しますか?")=6 Then
 				MsgBox"周囲確認タイマーを起動しました。",,"周囲確認タイマー"
 				Do
 					WScript.Sleep 300000-(1000*Timer+60000)Mod 300000
