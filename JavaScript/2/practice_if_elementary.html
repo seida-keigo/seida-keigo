@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>課題</title>
+</head>
+<body>
+	<script>
+		const p=str=>{
+			document.write("<p>"+str+"</p>");
+		}
+		
+		var rand1=Math.floor(3*Math.random());
+		var rand2=Math.floor(3*Math.random());
+		p("rand1: "+rand1);
+		p("rand2: "+rand2);
+		if(rand1>rand2){
+			p("rand1のほうが大きい値です");
+		}
+		else if(rand1<rand2){
+			p("rand2のほうが大きい値です");
+		}
+		else{
+			p("2つは同じ値です");
+		}
+	</script>
+</body>
+</html>

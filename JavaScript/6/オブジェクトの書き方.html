@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		var fruit=new Object();
+		fruit.name="apple";
+		fruit.price=100;
+		fruit.buyMsg=function(){
+			document.write("<p>"+fruit.name+"を"+fruit.price+"円で買いました</p>");
+		}
+		document.write(fruit.name);
+		fruit.buyMsg();
+	</script>
+</body>
+</html>

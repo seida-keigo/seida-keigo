@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js">
+	</script>
+	<script>
+		var tbody=document.createElement("tbody");
+		for(var i=1;i<=9;i++){
+			var tr=document.createElement("tr");
+			for(var j=1;j<=9;j++){
+				var td=document.createElement("td");
+				td.innerHTML=i+"*"+j+"="+i*j;
+				tr.append(td);
+			}
+			tbody.append(tr);
+		}
+		$(document).ready(()=>{
+			$("#matrix").append(tbody);
+		});
+	</script>
+</head>
+<body>
+	<table id="matrix">
+		<caption>九九表</caption>
+	</table>
+</body>
+</html>

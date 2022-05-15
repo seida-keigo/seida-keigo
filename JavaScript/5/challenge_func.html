@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>関数課題</title>
+</head>
+<body>
+	<script>
+		var price=100;
+		price=including_tax(price);//関数including_taxを実行する
+		document.write("税込み価格は"+price+"です");
+		
+		//税込み価格を計算する関数including_taxを作成する
+		function including_tax(price){
+			return 1.08*price;
+		}
+	</script>
+</body>
+</html>

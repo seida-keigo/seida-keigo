@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>課題</title>
+</head>
+<body>
+	<input id="text-input"> <button id="write-letter">1文字ずつ表示</button>
+	<div id="text-output"></div>
+	<script>
+		document.querySelector("#write-letter").addEventListener("click",()=>{
+			var i=0;
+			var interval=setInterval(()=>{
+				var textInput=document.querySelector("#text-input").value;
+				document.querySelector("#text-output").innerHTML+=textInput[i++];
+				if(i==textInput.length){
+					clearInterval(interval);
+				}
+			},2000);
+		},false);
+	</script>
+</body>
+</html>

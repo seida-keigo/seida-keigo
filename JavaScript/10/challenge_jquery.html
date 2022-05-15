@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>カウントダウンタイマー</title>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js">
+	</script>
+</head>
+<body>
+	<div id="display">03:00</div>
+	<button id="start">スタート</button>
+	<button id="stop">ストップ</button>
+	<button id="reset">リセット</button>
+	<script>
+		var intervalProgress=false;
+		$("#start").on("click",()=>{
+			if($("#display").html()!="Time UP!"&&!intervalProgress){
+				intervalProgress=true;
+				var interval=setInterval(()=>{
+					if($("#display").html()=="00:01"){
+						$("#display").html("Time UP!");
+						clearInterval(interval);
+						intervalProgress=false;
+					}
+					else{
+						var time=$("#display").html().split(":");
+						var newTime=60*time[0]+Number(time[1])-1;
+						newTime=("0"+Math.floor(newTime/60)).slice(-2)+":"+("0"+newTime%60).slice(-2);
+						$("#display").html(newTime);
+					}
+				},50/3);
+			}
+			
+			$("#stop").on("click",()=>{
+				intervalProgress=false;
+				clearInterval(interval);
+			});
+
+			$("#reset").on("click",()=>{
+				intervalProgress=false;
+				clearInterval(interval);
+				$("#display").html("03:00");
+			});
+		});
+	</script>
+</body>
+</html>

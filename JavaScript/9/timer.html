@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>カウントダウンタイマー</title>
+</head>
+<body>
+	<div id="display">03:00</div>
+	<button id="start">スタート</button>
+	<button id="stop">ストップ</button>
+	<button id="reset">リセット</button>
+	<script>
+		var intervalProgress=false;
+		document.querySelector("#start").addEventListener("click",()=>{
+			if(document.querySelector("#display").innerHTML!="Time UP!"&&!intervalProgress){
+				intervalProgress=true;
+				var interval=setInterval(()=>{
+					if(document.querySelector("#display").innerHTML=="00:01"){
+						document.querySelector("#display").innerHTML="Time UP!";
+						clearInterval(interval);
+						intervalProgress=false;
+					}
+					else{
+						var time=document.querySelector("#display").innerHTML.split(":");
+						var newTime=60*time[0]+Number(time[1])-1;
+						newTime=("0"+Math.floor(newTime/60)).slice(-2)+":"+("0"+newTime%60).slice(-2);
+						document.querySelector("#display").innerHTML=newTime;
+					}
+				},1000);
+			}
+			
+			document.querySelector("#stop").addEventListener("click",()=>{
+				intervalProgress=false;
+				clearInterval(interval);
+			},false);
+
+			document.querySelector("#reset").addEventListener("click",()=>{
+				intervalProgress=false;
+				clearInterval(interval);
+				document.querySelector("#display").innerHTML="03:00";
+			},false);
+		},false);
+	</script>
+</body>
+</html>

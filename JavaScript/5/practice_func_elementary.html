@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>課題</title>
+</head>
+<body>
+	<script>
+		var data=[59,39,100,2,15,40,84,97];
+		var ave;
+		ave=calc_ave(data);//関数calc_aveを実行する
+		document.write(ave);
+
+		//配列dataの平均値aveを計算する関数calc_aveを定義する
+		function calc_ave(array){
+			sum=0;
+			for(element of array){
+				sum+=element;
+			}
+			return sum/array.length;
+		}
+	</script>
+</body>
+</html>

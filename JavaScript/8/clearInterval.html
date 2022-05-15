@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>要素の作成・追加</title>
+	<script>
+		var interval_id;
+		var start_flag=false;
+
+		function start_flash_text(){
+			if(start_flag===false){
+				interval_id=setInterval(flash_text,1000);
+				start_flag=true;
+			}
+		}
+
+		function flash_text(){
+			var flash=document.getElementById("flash");
+			if(flash.style.color==="red"){
+				flash.style.color="blue";
+			}
+			else {
+				flash.style.color="red";
+			}
+		}
+
+		function stop_flash_text(){
+			clearInterval(interval_id);
+			start_flag=false;
+		}
+
+		window.onload=function(){
+			var start=document.getElementById("start");
+			start.addEventListener("click",start_flash_text,false);
+			var stop=document.getElementById("stop");
+			stop.addEventListener("click",stop_flash_text,false);
+		}
+	</script>
+</head>
+<body>
+	<p id="flash">flash text</p>
+	<button id="start">start</button>
+	<button id="stop">stop</button>
+</body>
+</html>

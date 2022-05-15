@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>スコープ</title>
+</head>
+<body>
+	<script>
+		/*
+		var str="global";
+		function test_scope(){
+			var str="local";
+		}
+		test_scope();
+		document.write(str);
+		*/
+		var num=3;
+		function test_scope(num){
+			num++;
+			document.write(num);
+		}
+		test_scope(num);
+		document.write(num);
+	</script>
+</body>
+</html>

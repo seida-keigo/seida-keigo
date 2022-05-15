@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>課題</title>
+</head>
+<body>
+	<script>
+		var data1=[59,39,100,2,15,40,84,97];
+		var data2=[63,18,64,97,50,98];
+		var sum=0;
+		for(datum of[...data1, ...data2]){
+			sum+=datum;
+		}
+		var ave=sum/(data1.length + data2.length);
+		document.write("data1とdata2を合わせた平均値: "+ave+"<br>");
+		document.write("平均値以上の数値は以下<br>");
+		for(datum1 of data1){
+			if(datum1>=ave){
+				document.write("data1: "+datum1+"<br>");
+			}
+		}
+		for(datum2 of data2){
+			if(datum2>=ave){
+				document.write("data2: "+datum2+"<br>");
+			}
+		}
+	</script>
+</body>
+</html>

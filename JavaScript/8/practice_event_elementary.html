@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>実行タイミング</title>
+	<script>
+		onload=()=>{
+			document.querySelector("#black").addEventListener("click",()=>{
+				document.body.style.background="#000";
+				document.body.style.color="#fff";
+			},false);
+			document.querySelector("#white").addEventListener("click",()=>{
+				document.body.style.background="transparent";
+				document.body.style.color="inherit";
+			},false);
+		}
+	</script>
+</head>
+<body>
+	<p>ボタンクリックにより背景色と文字色を変化</p>
+	<button id="black">背景黒</button>
+	<button id="white">背景白</button>
+</body>
+</html>

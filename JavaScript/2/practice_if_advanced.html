@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>課題</title>
+</head>
+<body>
+	<script>
+		const p=str=>{
+			document.write("<p>"+str+"</p>");
+		}
+		
+		var rand1=Math.floor(3*Math.random());
+		var rand2=Math.floor(3*Math.random());
+		var rand3=Math.floor(3*Math.random());
+		p("rand1: "+rand1);
+		p("rand2: "+rand2);
+		p("rand3: "+rand3);
+		if(rand1>rand2&&rand1>rand3){
+			p("一番値が大きいのはrand1です");
+		}
+		else if(rand2>rand1&&rand2>rand3){
+			p("一番値が大きいのはrand2です");
+		}
+		else if(rand3>rand1&&rand3>rand2){
+			p("一番値が大きいのはrand3です");
+		}
+		else if(rand1==rand2&&rand1>rand3){
+			p("一番値が大きいのはrand1とrand2です");
+		}
+		else if(rand1==rand3&&rand1>rand2){
+			p("一番値が大きいのはrand1とrand3です");
+		}
+		else if(rand2==rand3&&rand2>rand1){
+			p("一番値が大きいのはrand2とrand3です");
+		}
+		else{
+			p("3つは同じ値です");
+		}
+	</script>
+</body>
+</html>

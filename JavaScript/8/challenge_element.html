@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>課題</title>
+</head>
+<body>
+	<p>リンク名: <input id="link-name"> URL: <input id="url"> <button id="add-link">リンク追加</button></p>
+	<div id="link-list"></div>
+	<script>
+		document.querySelector("#add-link").addEventListener("click",()=>{
+			var a=document.createElement("a");
+			a.setAttribute("href",document.querySelector("#url").value);
+			a.innerHTML=document.querySelector("#link-name").value;
+			document.querySelector("#link-list").appendChild(a);
+		},false);
+	</script>
+</body>
+</html>

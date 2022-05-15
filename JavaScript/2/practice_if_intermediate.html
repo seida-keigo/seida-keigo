@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>課題</title>
+</head>
+<body>
+	<script>
+		const p=str=>{
+			document.write("<p>"+str+"</p>");
+		}
+
+		var rand1=Math.floor(101*Math.random());
+		var rand2=Math.floor(101*Math.random());
+		var rand3=Math.floor(101*Math.random());
+		p("rand1: "+rand1);
+		p("rand2: "+rand2);
+		p("rand3: "+rand3);
+		var max=rand1;
+		if(max<rand2){
+			max=rand2;
+		}
+		if(max<rand3){
+			max=rand3;
+		}
+		p("一番大きい数値: "+max);
+	</script>
+</body>
+</html>
