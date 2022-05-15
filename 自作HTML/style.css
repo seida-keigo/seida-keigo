@@ -21,15 +21,13 @@
 ::placeholder{
 	color:#ccc;
 }
-:root{
-	font-family:baseline,arial,yu gothic;
-	font-kerning:none;
-	overflow-wrap:break-word;
-}
 body{
 	background:#000;
 	color:#fff;
+	font-family:baseline,arial,yu gothic;
+	font-kerning:none;
 	margin:16px;
+	overflow-wrap:break-word;
 }
 button,p,textarea{
 	margin-bottom:16px;
