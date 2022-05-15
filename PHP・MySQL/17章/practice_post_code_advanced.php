@@ -29,7 +29,7 @@
   <?php
     $zip_code=preg_replace('/^[ 　]+|[ 　]+$/','',htmlspecialchars($_GET['zip_code'],ENT_QUOTES,'UTF-8'));
     if(isset($_GET['zip_code'])&&preg_match('/[0-9]{7,}/',$zip_code)===1){
-      $link=mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','t7ZWmB5c!','bcdhm_work02');
+      $link=mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','********','bcdhm_work02');
       mysqli_set_charset($link,'utf8');
       $result=mysqli_query($link,'SELECT a,e,f,g FROM zip_data_split_1 WHERE a=\''.$zip_code.'\';');
       while($row=mysqli_fetch_array($result)){
@@ -53,7 +53,7 @@
     $pref=htmlspecialchars($_GET['pref'],ENT_QUOTES,'UTF-8');
     $city=preg_replace('/^[ 　]+|[ 　]+$/','',htmlspecialchars($_GET['city'],ENT_QUOTES,'UTF-8'));
     if(isset($_GET['pref'])&&isset($_GET['city'])&&$city!==''){
-      $link=mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','t7ZWmB5c!','bcdhm_work02');
+      $link=mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','********','bcdhm_work02');
       mysqli_set_charset($link,'utf8');
       $result=mysqli_query($link,'SELECT a,e,f,g FROM zip_data_split_'.$pref.' WHERE f=\''.$city.'\';');
       while($row=mysqli_fetch_array($result)){

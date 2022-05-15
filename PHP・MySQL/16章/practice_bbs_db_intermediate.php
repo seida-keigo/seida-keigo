@@ -19,7 +19,7 @@
       $name=htmlspecialchars($_POST['name'],ENT_QUOTES,'UTF-8');
       $comment=htmlspecialchars($_POST['comment'],ENT_QUOTES,'UTF-8');
       if(isset($_POST['name'])&&$name!==''&&mb_strlen($name)<=20&&isset($_POST['comment'])&&$comment!==''&&mb_strlen($comment)<=100){
-        $link=mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','t7ZWmB5c!','bcdhm_work02');
+        $link=mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','********','bcdhm_work02');
         mysqli_set_charset($link,'utf8');
         $time=date('Y/n/j G:i');
         $name=htmlspecialchars($_POST['name'],ENT_QUOTES,'UTF-8');
@@ -35,7 +35,7 @@
   </form>
   <p>発言一覧</p>
   <?php
-    $link=mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','t7ZWmB5c!','bcdhm_work02');
+    $link=mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','********','bcdhm_work02');
     mysqli_set_charset($link,'utf8');
     $result=mysqli_query($link,'SELECT time,name,comment FROM bbs');
     while($row=mysqli_fetch_array($result)){

@@ -9,7 +9,7 @@
 		function is_natural($num){
 			return is_numeric($num)&&is_int(+$num)&&$num>=0;
 		}
-		$link=mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','t7ZWmB5c!','bcdhm_work02');
+		$link=mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','********','bcdhm_work02');
 		mysqli_set_charset($link,'utf8');
 	?>
 	<form method="post" enctype="multipart/form-data">

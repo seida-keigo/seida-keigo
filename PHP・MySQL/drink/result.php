@@ -6,7 +6,7 @@
 </head>
 <body>
 	<?php
-		$link=mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','t7ZWmB5c!','bcdhm_work02');
+		$link=mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','********','bcdhm_work02');
 		mysqli_set_charset($link,'utf8');
 		$money_is_correct=is_numeric($_POST['money'])?(is_int(+$_POST['money'])&&$_POST['money']>=0):false;
 		if(isset($_POST['id'])&&$money_is_correct){

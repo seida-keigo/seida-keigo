@@ -2,7 +2,7 @@
   define('TAX',1.05);//消費税
   define('DB_HOST','mysql34.conoha.ne.jp');//データベースのホスト名又はIPアドレス
   define('DB_USER','bcdhm_work02');//MySQLのユーザ名
-  define('DB_PASSWD','t7ZWmB5c!');//MySQLのパスワード
+  define('DB_PASSWD','********');//MySQLのパスワード
   define('DB_NAME','bcdhm_work02');//データベース名
   define('HTML_CHARACTER_SET','UTF-8');//HTML文字エンコーディング
   define('DB_CHARACTER_SET','UTF8');//DB文字エンコーディング

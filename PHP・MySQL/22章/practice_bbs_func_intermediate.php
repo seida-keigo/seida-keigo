@@ -17,7 +17,7 @@
     <button type="submit">送信</button>
     <?php
       function connect(){
-        return mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','t7ZWmB5c!','bcdhm_work02');
+        return mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','********','bcdhm_work02');
       }
       function insert($link,$time,$name,$comment){
         mysqli_query($link,'INSERT INTO bbs(time,name,comment)VALUES(\''.$time.'\',\''.$name.'\',\''.$comment.'\')');

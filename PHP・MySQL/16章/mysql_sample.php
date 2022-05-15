@@ -6,7 +6,7 @@
   }
   $host='mysql34.conoha.ne.jp';
   $username='bcdhm_work02';
-  $passwd='t7ZWmB5c!';
+  $passwd='********';
   $dbname='bcdhm_work02';
   $link=mysqli_connect($host,$username,$passwd,$dbname);
   if($link){

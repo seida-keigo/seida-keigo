@@ -2,7 +2,7 @@
   //MySQL接続情報
   $host='mysql34.conoha.ne.jp';
   $user='bcdhm_work02';
-  $passwd='t7ZWmB5c!';
+  $passwd='********';
   $dbname='bcdhm_work02';
   $customer_id=1;//例題のため顧客は1に固定
   $payment='クレジット';//例題のため購入方法はクレジットに固定する

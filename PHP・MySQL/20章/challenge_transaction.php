@@ -1,7 +1,7 @@
 <?php
   $host='mysql34.conoha.ne.jp';
   $user='bcdhm_work02';
-  $passwd='t7ZWmB5c!';
+  $passwd='********';
   $dbname='bcdhm_work02';
   $customer_id=1;//顧客は1に固定
   $message='';//購入処理完了時の表示メッセージ

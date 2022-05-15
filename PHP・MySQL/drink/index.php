@@ -9,7 +9,7 @@
 	<form action="result.php" method="post">
 		金額 <input name="money"><br>
 		<?php	
-			$link=mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','t7ZWmB5c!','bcdhm_work02');
+			$link=mysqli_connect('mysql34.conoha.ne.jp','bcdhm_work02','********','bcdhm_work02');
 			mysqli_set_charset($link,'utf8');
 			$result=mysqli_query($link,'SELECT*FROM drink_table');
 			while($item=mysqli_fetch_array($result)){
