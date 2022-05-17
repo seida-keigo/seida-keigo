@@ -21,7 +21,7 @@
 			console.error=x=>{
 				let newP=document.createElement("p");
 				newP.innerText=JSON.stringify(x);
-				newP.setAttribute("style","color:#f00;")
+				newP.style="color:#f00;";
 				document.body.appendChild(newP);
 			}
 			console.log=x=>{
@@ -32,7 +32,7 @@
 			console.warn=x=>{
 				let newP=document.createElement("p");
 				newP.innerText=JSON.stringify(x);
-				newP.setAttribute("style","color:#ff0;")
+				newP.style="color:#ff0;";
 				document.body.appendChild(newP);
 			}
 			document.querySelectorAll("button")[0].onclick=()=>{
@@ -42,7 +42,7 @@
 				catch(error){
 					let newP=document.createElement("p");
 					newP.innerText=error;
-					newP.setAttribute("style","color:#f00;")
+					newP.style="color:#f00;";
 					document.body.appendChild(newP);
 				}
 			}

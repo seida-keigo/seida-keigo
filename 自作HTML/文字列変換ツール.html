@@ -21,12 +21,12 @@
 				try{
 					let $=document.querySelectorAll("textarea")[0].value;
 					$=eval(document.querySelectorAll("textarea")[1].value);
-					newText.setAttribute("style",typeof $=="string"?"white-space:pre-wrap;":"font-style:italic;");
+					newText.style=typeof $=="string"?"white-space:pre-wrap;":"font-style:italic;";
 					newText.value=$;
 					copyButton[$&&typeof $=="string"?"removeAttribute":"setAttribute"]("disabled","");
 				}
 				catch(error){
-					newText.setAttribute("style","color:#f00;");
+					newText.style="color:#f00;";
 					newText.value=error;
 					copyButton.setAttribute("disabled","");
 				}

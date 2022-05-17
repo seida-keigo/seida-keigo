@@ -16,7 +16,7 @@
 	all:unset;
 	display:revert;
 	line-height:calc(1em + 8px);
-	transition:.25s background;
+	transition:.25s background-color;
 }
 ::placeholder{
 	color:#ccc;
