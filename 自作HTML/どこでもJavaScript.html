@@ -15,23 +15,27 @@
 		<textarea placeholder="JavaScript"></textarea>
 		<button>実行</button>
 		<script>
-			clear=console.clear=()=>{
+			console.clear=()=>{
 				for(let p of document.querySelectorAll("p")) p.remove();
-			}
-			console.error=x=>{
 				let newP=document.createElement("p");
-				newP.innerText=JSON.stringify(x);
+				newP.innerText="コンソールをクリアしました。";
+				newP.style="font-style:italic;";
+				document.body.appendChild(newP);
+			}
+			console.error=(...items)=>{
+				let newP=document.createElement("p");
+				newP.innerText=items.map(x=>JSON.stringify(x)).join(" ");
 				newP.style="color:#f00;";
 				document.body.appendChild(newP);
 			}
-			console.log=x=>{
+			console.log=(...items)=>{
 				let newP=document.createElement("p");
-				newP.innerText=JSON.stringify(x);
+				newP.innerText=items.map(x=>JSON.stringify(x)).join(" ");
 				document.body.appendChild(newP);
 			}
-			console.warn=x=>{
+			console.warn=(...items)=>{
 				let newP=document.createElement("p");
-				newP.innerText=JSON.stringify(x);
+				newP.innerText=items.map(x=>JSON.stringify(x)).join(" ");
 				newP.style="color:#ff0;";
 				document.body.appendChild(newP);
 			}
